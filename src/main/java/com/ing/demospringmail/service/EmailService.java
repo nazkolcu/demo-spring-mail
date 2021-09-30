@@ -45,7 +45,7 @@ public class EmailService {
         ImageUtil.textToImage(customer.getName());
 
         helper.addInline("customerName",
-                new File("src/main/resources/images/custom/" + customer.getName() + ".jpg"));
+                new File("src/main/resources/images/customer/" + customer.getName() + ".jpg"));
 
         javaMailSender.send(message);
     }

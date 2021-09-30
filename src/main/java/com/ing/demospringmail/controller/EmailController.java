@@ -36,7 +36,7 @@ public class EmailController {
         }
 
         MyResponse response=new MyResponse();
-        response.setResult("email gonderildi!");
+        response.setResult("the mail has been sent!");
         return ResponseEntity.ok(response);
     }
 }

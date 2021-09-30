@@ -51,7 +51,7 @@ public class ImageUtil {
         graphics2d = drawStringOver(graphics2d, text, 0, 0, width, height);
         graphics2d.dispose();
         try {
-            ImageIO.write(image, "png", new File("src/main/resources/images/custom/" + name + ".jpg"));
+            ImageIO.write(image, "png", new File("src/main/resources/images/customer/" + name + ".jpg"));
         } catch (IOException ex) {
             ex.printStackTrace();
         }
