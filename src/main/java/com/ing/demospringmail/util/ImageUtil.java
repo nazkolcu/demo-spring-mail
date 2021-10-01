@@ -30,6 +30,7 @@ public class ImageUtil {
 
         graphics2d.setFont(pixelMPlus);
         FontMetrics fontmetrics = graphics2d.getFontMetrics();
+
         int width;
         if (name.length() > hosGeldiniz.length()) {
             width = fontmetrics.stringWidth(name);
@@ -48,7 +49,7 @@ public class ImageUtil {
         graphics2d.setFont(pixelMPlus);
         graphics2d.setColor(new Color(51, 51, 51));
 
-        graphics2d = drawStringOver(graphics2d, text, 0, 0, width, height);
+        drawStringOver(graphics2d, text, 0, 0, width, height);
         graphics2d.dispose();
         try {
             ImageIO.write(image, "png", new File("src/main/resources/images/customer/" + name + ".jpg"));
@@ -57,7 +58,7 @@ public class ImageUtil {
         }
     }
 
-    static Graphics2D drawStringOver(Graphics2D g, String text, int x, int y, int width, int height) {
+    static void drawStringOver(Graphics2D g, String text, int x, int y, int width, int height) {
         g.setBackground(Color.WHITE);
         g.clearRect(0, 0, width, height);
 
@@ -65,6 +66,6 @@ public class ImageUtil {
             y = y + g.getFontMetrics().getHeight();
             g.drawString(line, x, y);
         }
-        return g;
+    //    return g;
     }
 }
